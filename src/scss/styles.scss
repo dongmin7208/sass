@@ -1,10 +1,20 @@
 @import "_variables";
-
+@import "_mixins";
 body {
     background: $bg;
+    display: flex;
+    justify-content: space-around;
 }
 
 h1 {
     font-size: 32px;
-    display: flex;
+}
+a {
+    margin-bottom: 20px;
+    &:nth-child(odd) {
+        @include link(red);
+    }
+    &:nth-child(even) {
+        @include link(blue);
+    }
 }
